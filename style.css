@@ -1,0 +1,1105 @@
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins/Poppins-Light.ttf);
+}
+
+
+:root{
+
+    --dark: #d31717;
+    --lantern-yellow: #f0a63c;
+    --monk-orange:  #d88c3a;
+    --light: rgb(255, 247, 235);
+}
+
+.active {
+  border-bottom: 50px solid #07bae6;
+}
+
+* {box-sizing: border-box;}
+
+
+html{
+
+    background-color: var(--lantern-yellow);
+
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
+
+.container{
+    scroll-behavior: smooth;
+    max-height: 100vh;      
+    scroll-snap-type: y proximity;
+	overflow-y: scroll;
+    overflow-x: hidden; 
+}
+
+
+#navbar-right .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 98;
+}
+
+#org-dropdown {
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+#public-dropdown {
+    padding-top: 3vh;
+}
+
+#navbar-right .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: var(--lantern-yellow);
+
+
+
+    margin-left: 3.7vw;
+    padding-bottom: 3vh;
+
+}
+#navbar-right .dropdown-content span{
+    display: flex;
+    flex-flow: column nowrap;
+}
+#navbar-right .dropdown-content #public-dropdown{
+    text-align: left;
+}
+
+#navbar-right .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+#navbar {
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0 0;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.1s ease;
+    -moz-transition    : all 0.1s ease;
+    -o-transition      : all 0.1s ease;
+    -webkit-transition : all 0.1s ease;
+    transition         : all 0.1s ease;
+}
+#navbar a{
+    text-align: center;
+    line-height:0;
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-family: poppins;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+
+    -moz-transition    : all 0.25s ease;
+    -o-transition      : all 0.25s ease;
+    -webkit-transition : all 0.25s ease;
+    transition         : all 0.25s ease;
+}
+
+#navbar-right{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+
+#second{
+    position: fixed;
+    transform: translate(-5vw, 3.7vh);
+}
+
+#logo{
+    position: fixed;
+    transform: translate(-45.8vw, 0);
+}
+
+#navbar-right #logo-space{
+    color: transparent;
+    font-family: "ivypresto-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
+    margin-top: -0.4vw;
+}
+
+a:hover{
+    transition: all ease-in-out 100ms;
+    cursor: pointer;
+}
+
+
+/* #navbar-right>*{
+    margin-inline: 3.8vw;
+
+} */
+
+#logo{
+    margin-inline: 3.8vw;
+}
+#link{
+    margin-inline: 3.8vw;
+}
+#link1{
+    margin-inline: 3.8vw;
+}
+#link2{
+    margin-inline: 3.8vw;
+}
+#link3{
+    margin-inline: 3.8vw;
+}
+#link4{
+    margin-inline: 3.8vw;
+}
+
+#link5{
+    font-size: 1.25vw;
+    white-space: nowrap;
+    background-color: rgb(219, 123, 41);
+    padding: 0.5vw;
+    margin-inline: 3.8vw;
+}
+
+#link5:hover{
+    background-color: rgba(253, 234, 26, 0.412);
+    transition: all 1.5s ease-in-out;
+}
+
+#navbar #logo {
+    -moz-transition    : all 0.4s ease;
+    -o-transition      : all 0.4s ease;
+    -webkit-transition : all 0.4s ease;
+    transition         : all 0.4s ease;
+    color: white;
+    font-family: "ivypresto-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.3vw;
+    white-space: nowrap;
+    margin-top: -0.4vw;
+}
+
+/*BODY*/
+
+body{
+    width: 100vw;
+    height: auto;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FRONT PAGE */
+
+.front-page{
+    width: 100vw; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-flow: row nowrap;
+}
+
+
+.front-page .right-side{
+    background-image: url(./images/original\ low\ res.jpg);
+    background-position: left center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100vh;
+}
+
+.front-page .left-side{
+    height: 100vh;
+    width: 50%;
+    text-align: center;
+}
+
+button, .button{ /*button class also styles the button on the register form with the .button class*/
+    cursor: pointer;
+    background-color: #ad200051;
+    border: none;
+    border-radius: 200px;
+    padding:  0.5vw;
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style:normal;
+    font-size: 1.2vw;
+}
+
+.button:hover, button:hover{
+    background-color: rgba(253, 234, 26, 0.412);
+    transition: all 1.75s ease-in-out;
+}
+
+.front-page .left-side h3{
+    color: white;
+    font-size: 3.5vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    padding-top: 30vh;
+    margin-bottom: 3vh;
+}
+
+.front-page .left-side h4{
+    font-family: poppins;
+    font-style: italic;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.25vw;
+    padding-bottom: 7vh;
+}
+
+.front-page .left-side h5{
+ margin-top: 12vh;
+}
+
+
+
+
+
+
+
+
+.my_div {
+    background-color: transparent;
+    transition: all 2s ease-in-out;
+}
+
+.my_div:hover {
+    background-color: transparent;
+}
+
+h1 {
+    overflow: hidden;
+}
+
+.old-text,
+.new-text {
+    display: block;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style:normal;
+    font-size: 1.3vw;
+}
+
+.old-text {
+  height: auto;
+  opacity: 1;
+  width: auto;
+}
+.new-text {
+  color: #ffff;
+  height: 0;
+  opacity: 0;
+  width: 0;
+
+
+}
+.my_div:hover .old-text {
+  height: 0px;
+  opacity: 0;
+  width: 0px;
+}
+.my_div:hover .new-text {
+    height: auto;
+    opacity: 1;
+    width: fit-content;
+    margin-left: 9vw;
+
+    cursor: pointer;
+    background-color: #edcbc351;
+    border-radius: 0px 20px 0px 20px;
+    padding:  0.5vw;
+    font-size: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SECOND PAGE*/
+
+.second-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: var(--monk-orange);
+}
+
+.second-page .left-side{
+    width: 50%;
+    background-position: right center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.second-page .right-side{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.second-page .right-side p{
+    padding-inline: 5vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1.25vw;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PROFILE PAGE*/
+
+.profile-page{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.profile-page .right-side{
+    width: 50vw;
+
+    background-image: url(./images/brendan-water-788.3k.jpg); 
+    background-position: -28vw -30vh ; 
+    background-size: 165%;
+    background-repeat: no-repeat; 
+
+}
+
+.profile-page .left-side{
+    width: 50vw;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.profile-page .left-side h3{
+    color: white;
+    font-size: 3.3vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+
+margin-top: 8vh;
+margin-bottom: 1vh;
+
+}
+
+.profile-page .left-side p{
+    padding-inline: 4vw;
+    margin-top: 0;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1vw;
+
+    white-space: pre-wrap;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FACES PAGE*/
+.faces-page{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--monk-orange);
+}
+
+.faces-page .left-side{
+    width: 50vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.faces-page .left-side img{
+    width: 45vw;
+
+
+}
+
+.faces-page .right-side{
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1.25vw;
+    text-align: left;
+    display:flex;
+    align-items: center;
+}
+
+
+.faces-page .right-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 2vh;
+}
+
+.faces-page .right-side p{
+    padding-inline: 2vw;
+}
+
+
+
+
+
+
+
+
+
+
+/*TESTIMONIALS PAGE*/
+
+.testimonials-page{
+    background-color: #d0c7ab;
+    width: 100vw;
+    color: white;
+    font-family: poppins;
+    font-size: 1.25vw;
+    text-align: center;
+
+
+
+    padding-bottom: 0;
+    margin-bottom: 0; 
+
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* justify-content: center;
+     */
+}
+
+
+/*TESTIMONIAL SLIDE STYLING */
+
+
+.slide-content {
+    padding-inline: 10vw; 
+    width: 90vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height:45vh;
+
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+
+
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left:hover{
+    transition: all ease-in-out 1s;
+    border-color: transparent #ffffff transparent transparent;
+}
+#arrow-right:hover{
+    transition: all ease-in-out 1s;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+#arrow-left {
+    border-width: 1.5vw 2vw 1.5vw 2vw;
+    border-color: transparent #ffffff9b transparent transparent;
+    position: relative;
+    /* left: 0;
+    top: 20vh; */
+}
+
+#arrow-right {
+    border-width: 1.5vw 2vw 1.5vw 2vw;
+    border-color: transparent transparent transparent #ffffff9b;
+    position: relative;
+    /* left: 95vw;
+    bottom: 20vh; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAP PAGE*/
+.map{
+    background-color: var(--monk-orange);
+    min-height: 100vh;
+
+}
+
+.map h3{
+    text-align: center;
+    color: white;
+    font-size: 4.8vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    padding-top: 18vh;
+    margin-bottom: 15vh;
+
+    margin-top: 0; 
+}
+
+.map h4{
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 2.2vw;
+    text-align: center;
+    margin-bottom: 0;
+    padding-right: 2.8vw;
+
+}
+
+.map p{
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1.4vw;
+    text-align: center;
+    padding-inline: 32vw;
+
+}
+
+.map #button-span{
+    padding-bottom: 7vh;
+
+}
+
+.map-row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items:end;
+    margin-top: 5vh;
+
+}
+
+
+
+.map img{
+    width: 10vw;
+}
+
+.schedule-chat{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*REASSURANCE PAGE*/
+
+.reassurance{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.reassurance .right-side{
+    background-image: url(./images/brendan-lecture-536.8k.jpg);
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width: 50vw;
+}
+
+.reassurance .left-side{
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.reassurance .left-side p{
+    padding-inline: 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PRICES PAGE*/
+.prices-page{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--monk-orange);
+}
+
+.prices-page .left-side{
+    width: 50%;
+    background-position: right center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.prices-page .right-side{
+    width: 50%;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.prices-page .right-side p{
+    color: white;
+    font-size: 2vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    /* padding-top: 0vh; */
+}
+
+.prices-page .right-side li{
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1vw;
+    text-align: left;
+    /* padding-bottom: 1vh; */
+}
+
+.prices-page .right-side ul{
+    list-style-position: outside;
+    padding-inline: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*REGISTER PAGE*/
+
+.register{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(./images/brendan-blue-landscape-1.8m.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+.register .right-side{
+    width: 100vw;
+    padding-top: 0vh;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 10vh;
+}
+
+.register .right-side form input{
+    width: 35vw;
+    height: 5vh;
+}
+
+#sendMessage{
+    transform: translateX(9vw);
+}
+
+.register .left-side{
+    /* background-color: var(--lantern-yellow); */
+
+    width: 100vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/* #register-row{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+} */
+
+label{
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+}
+
+.register img{
+    width: 25vw;
+}
+
+.register .left-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+.footer p{
+    font-size: 1vw;
+    font-family: poppins;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer img{
+    width: 3vw;
+}
